@@ -14,8 +14,6 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var corComboBox: NSComboBox!
     @IBOutlet weak var fundoBox: NSBox!
 
-    var gerador: GeradorSequencialCiclico?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -23,6 +21,15 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         intervaloInput.intValue = 1
         intervaloStepper.intValue = 1
         corComboBox.selectItem(at: 0)
+        CoresXPCUtility.shared.reply = { valorAlpha in
+            print("Recebido valor do XPC")
+                DispatchQueue.main.async {
+                    let cor = self.fundoBox.borderColor.withAlphaComponent(valorAlpha)
+                    self.fundoBox.borderColor = cor
+                    self.fundoBox.fillColor = cor
+                    print("Fim da recepção do valor do XPC")
+                }
+        }
     }
 
     @IBAction func mudancaCor(_ sender: NSComboBox) {
@@ -48,19 +55,17 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
 
     @IBAction func iniciarAction(_ sender: NSButton) {
-        if self.gerador != nil {
-            self.pararAction(sender)
-        }
-        self.gerador = GeradorSequencialCiclico(intervalo: Double(intervaloInput.integerValue))
-        self.gerador?.iniciar(valorInicial: self.fundoBox.borderColor.alphaComponent, callback: { valorAlpha in
-            let cor = self.fundoBox.borderColor.withAlphaComponent(valorAlpha)
-            self.fundoBox.borderColor = cor
-            self.fundoBox.fillColor = cor
-        })
+//        if self.geradorXPC != nil {
+//            self.pararAction(sender)
+//        }
+        CoresXPCUtility.shared.servicoXPC().iniciarGeradorCiclicoAlpha(
+            self.fundoBox.borderColor.alphaComponent,
+            intervalo: intervaloInput.integerValue
+        )
     }
 
     @IBAction func pararAction(_ sender: NSButton) {
-        self.gerador?.parar()
-        self.gerador = nil
+        CoresXPCUtility.shared.servicoXPC().pararGeradorCiclicoAlpha()
+        CoresXPCUtility.shared.invalidarConexao()
     }
 }

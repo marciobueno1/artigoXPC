@@ -7,6 +7,7 @@
 
 import Foundation
 
-@objc public protocol CoresXPCProtocol {
-    func upperCaseString(_ string: String, withReply reply: @escaping (String) -> Void)
+@objc(CoresXPCProtocol) public protocol CoresXPCProtocol {
+    func iniciarGeradorCiclicoAlpha(_ alphaAtual: Double, intervalo: Int)
+    func pararGeradorCiclicoAlpha()
 }

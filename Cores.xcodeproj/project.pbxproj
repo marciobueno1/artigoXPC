@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A85A22B5275DA1A600C13A41 /* CoresXPCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B1275DA1A600C13A41 /* CoresXPCDelegate.swift */; };
 		A85A22B6275DA1A600C13A41 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B2275DA1A600C13A41 /* main.swift */; };
 		A85A22B7275DA1A600C13A41 /* CoresXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */; };
 		A85A22B8275DA1A600C13A41 /* CoresXPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B4275DA1A600C13A41 /* CoresXPC.swift */; };
@@ -16,7 +15,10 @@
 		A8806E1B275DA06D007E0D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8806E1A275DA06D007E0D18 /* Assets.xcassets */; };
 		A8806E1E275DA06D007E0D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8806E1C275DA06D007E0D18 /* Main.storyboard */; };
 		A8806E34275DA100007E0D18 /* CoresXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = A8806E29275DA100007E0D18 /* CoresXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A8C826E2276524D100C34004 /* GeradorSequencialCiclico.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E1276524D100C34004 /* GeradorSequencialCiclico.swift */; };
+		A8AF26F62765E7E30015C127 /* CoresXPCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF26F52765E7E30015C127 /* CoresXPCDelegate.swift */; };
+		A8AF26F9276652BA0015C127 /* GeradorSequencialCiclico.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF26F8276652B90015C127 /* GeradorSequencialCiclico.swift */; };
+		A8C826E5276595E300C34004 /* CoresXPCUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E4276595E300C34004 /* CoresXPCUtility.swift */; };
+		A8C826E72765B31100C34004 /* CoresProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E62765B31100C34004 /* CoresProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A85A22B1275DA1A600C13A41 /* CoresXPCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoresXPCDelegate.swift; sourceTree = "<group>"; };
 		A85A22B2275DA1A600C13A41 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoresXPCProtocol.swift; sourceTree = "<group>"; };
 		A85A22B4275DA1A600C13A41 /* CoresXPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoresXPC.swift; sourceTree = "<group>"; };
@@ -56,7 +57,11 @@
 		A8806E1F275DA06D007E0D18 /* Cores.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cores.entitlements; sourceTree = "<group>"; };
 		A8806E29275DA100007E0D18 /* CoresXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = CoresXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8806E31275DA100007E0D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8C826E1276524D100C34004 /* GeradorSequencialCiclico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeradorSequencialCiclico.swift; sourceTree = "<group>"; };
+		A8AF26F52765E7E30015C127 /* CoresXPCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresXPCDelegate.swift; sourceTree = "<group>"; };
+		A8AF26F7276640EE0015C127 /* CoresXPC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoresXPC.entitlements; sourceTree = "<group>"; };
+		A8AF26F8276652B90015C127 /* GeradorSequencialCiclico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeradorSequencialCiclico.swift; sourceTree = "<group>"; };
+		A8C826E4276595E300C34004 /* CoresXPCUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresXPCUtility.swift; sourceTree = "<group>"; };
+		A8C826E62765B31100C34004 /* CoresProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +105,10 @@
 			children = (
 				A8806E16275DA06C007E0D18 /* AppDelegate.swift */,
 				A85A22B9275DA28D00C13A41 /* ViewController.swift */,
-				A8C826E1276524D100C34004 /* GeradorSequencialCiclico.swift */,
 				A8806E1A275DA06D007E0D18 /* Assets.xcassets */,
 				A8806E1C275DA06D007E0D18 /* Main.storyboard */,
 				A8806E1F275DA06D007E0D18 /* Cores.entitlements */,
+				A8C826E4276595E300C34004 /* CoresXPCUtility.swift */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -111,10 +116,13 @@
 		A8806E2A275DA100007E0D18 /* CoresXPC */ = {
 			isa = PBXGroup;
 			children = (
+				A8AF26F7276640EE0015C127 /* CoresXPC.entitlements */,
 				A85A22B2275DA1A600C13A41 /* main.swift */,
 				A85A22B4275DA1A600C13A41 /* CoresXPC.swift */,
-				A85A22B1275DA1A600C13A41 /* CoresXPCDelegate.swift */,
+				A8AF26F52765E7E30015C127 /* CoresXPCDelegate.swift */,
 				A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */,
+				A8C826E62765B31100C34004 /* CoresProtocol.swift */,
+				A8AF26F8276652B90015C127 /* GeradorSequencialCiclico.swift */,
 				A8806E31275DA100007E0D18 /* Info.plist */,
 			);
 			path = CoresXPC;
@@ -223,7 +231,7 @@
 			files = (
 				A8806E17275DA06C007E0D18 /* AppDelegate.swift in Sources */,
 				A85A22BA275DA28D00C13A41 /* ViewController.swift in Sources */,
-				A8C826E2276524D100C34004 /* GeradorSequencialCiclico.swift in Sources */,
+				A8C826E5276595E300C34004 /* CoresXPCUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,9 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A85A22B8275DA1A600C13A41 /* CoresXPC.swift in Sources */,
+				A8AF26F62765E7E30015C127 /* CoresXPCDelegate.swift in Sources */,
 				A85A22B6275DA1A600C13A41 /* main.swift in Sources */,
 				A85A22B7275DA1A600C13A41 /* CoresXPCProtocol.swift in Sources */,
-				A85A22B5275DA1A600C13A41 /* CoresXPCDelegate.swift in Sources */,
+				A8C826E72765B31100C34004 /* CoresProtocol.swift in Sources */,
+				A8AF26F9276652BA0015C127 /* GeradorSequencialCiclico.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZZDPV3P5GL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -411,6 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZZDPV3P5GL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -431,9 +443,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CoresXPC/CoresXPC.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZZDPV3P5GL;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoresXPC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CoresXPC;
@@ -455,9 +471,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CoresXPC/CoresXPC.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZZDPV3P5GL;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoresXPC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CoresXPC;
