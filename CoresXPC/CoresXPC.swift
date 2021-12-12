@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CoresXPC: NSObject, CoresXPCProtocol, NSXPCListenerDelegate {
+class CoresXPC: NSObject, CoresXPCProtocol {
     var listener : CoresProtocol?
     private var geradorCiclico = GeradorSequencialCiclico()
 
