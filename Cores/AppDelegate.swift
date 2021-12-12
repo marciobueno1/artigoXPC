@@ -10,10 +10,6 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    override init() {
-        // CoresXPCUtility.shared.servicoXPC().pararGeradorCiclicoAlpha()
-    }
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }

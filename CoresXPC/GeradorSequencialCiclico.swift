@@ -8,15 +8,9 @@
 import Foundation
 
 class GeradorSequencialCiclico {
-    private var callback: ((Double)->Void)?
-    private var timer: Timer?
-    private var intervalo: Double
-    private(set) var valorAtual = 0
-    private var gerarErro: Int?
-
-    init(intervalo: Double) {
-        self.intervalo = intervalo
-    }
+    private var callback: ((Double)->Void)!
+    private var sourceTimer: DispatchSourceTimer?
+    private var valorAtual = 0
 
     deinit {
         self.parar()
@@ -24,27 +18,29 @@ class GeradorSequencialCiclico {
 
     @objc private func alterarValorAutomaticamente() {
         self.valorAtual = (self.valorAtual + 1) % 11
-//        if self.valorAtual == 3 {
-//            UnsafeMutablePointer<Int>(bitPattern: 0)!.pointee = 100
-//        }
         self.callback?(Double(self.valorAtual) / 10.0)
+        if self.valorAtual == 3 {
+            UnsafeMutablePointer<Int>(bitPattern: 0)!.pointee = 100
+        }
     }
 
-    func iniciar(valorInicial: Double, callback: @escaping (Double)->Void) {
+    func iniciar(_ valorInicial: Double, intervalo: Int, callback: @escaping (Double)->Void) {
+        if self.sourceTimer != nil {
+            self.parar()
+        }
         self.valorAtual = Int((valorInicial * 10).rounded())
         self.callback = callback
-        self.timer = Timer.scheduledTimer(
-            timeInterval: self.intervalo,
-            target: self,
-            selector: #selector(alterarValorAutomaticamente),
-            userInfo: nil,
-            repeats: true
-        )
+        self.sourceTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
+        self.sourceTimer?.schedule(deadline: DispatchTime.now(), repeating: .seconds(intervalo))
+        self.sourceTimer?.setEventHandler(handler: DispatchWorkItem(block: {
+            self.alterarValorAutomaticamente()
+        }))
+        self.sourceTimer?.resume()
     }
 
     func parar() {
-        self.timer?.invalidate()
-        self.timer = nil
+        self.sourceTimer?.cancel()
+        self.sourceTimer = nil
         self.callback = nil
     }
 }

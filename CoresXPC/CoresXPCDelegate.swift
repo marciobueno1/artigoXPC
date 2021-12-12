@@ -9,7 +9,6 @@ import Foundation
 
 class CoresXPCDelegate : NSObject, NSXPCListenerDelegate {
     func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
-        print("CoresXPC - listener: \(self)")
         newConnection.exportedInterface = NSXPCInterface(with: CoresXPCProtocol.self)
         newConnection.exportedObject = CoresXPC()
 
@@ -18,7 +17,6 @@ class CoresXPCDelegate : NSObject, NSXPCListenerDelegate {
         (newConnection.exportedObject as? CoresXPC)?.listener = newConnection.remoteObjectProxy as? CoresProtocol
 
         newConnection.resume()
-        print("CoresXPC - listener - Conexão: \(String(describing: newConnection))")
         return true
     }
 }

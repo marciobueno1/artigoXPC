@@ -9,17 +9,12 @@ import Foundation
 import CoresXPC
 
 class CoresXPCUtility {
-    static var shared: CoresXPCUtility = {
-        let instance = CoresXPCUtility()
-        return instance
-    }()
+    private var reply: (Double) -> Void
+    private var conexao: NSXPCConnection!
 
-    private init() {
-        print("CoresXPCUtility - init")
+    init(reply: @escaping (Double) -> Void) {
+        self.reply = reply
     }
-
-    var conexao: NSXPCConnection!
-    var reply: ((Double) -> Void)?
 
     private func conectar() {
         self.conexao = NSXPCConnection(serviceName: "br.org.cesar.CoresXPC")
@@ -30,42 +25,38 @@ class CoresXPCUtility {
         self.conexao.exportedInterface = NSXPCInterface(with: CoresProtocol.self)
 
         self.conexao.interruptionHandler = {
-          print("conexão interrompida")
+            NSLog("Conexão interrompida")
+            self.conexao = nil
         }
 
         self.conexao.invalidationHandler = {
-          print("conexão invalidada")
-          self.conexao = nil
+            NSLog("Conexão invalidada")
+            self.conexao = nil
         }
 
         self.conexao.resume()
-        print("CoresXPCUtility - conectar")
     }
 
     func invalidarConexao() {
         guard self.conexao == nil else {
-            print("sem conexão para invalidar")
+            NSLog("Sem conexão para invalidar")
             return
         }
         self.conexao.invalidate()
     }
 
     public func servicoXPC() -> CoresXPCProtocol {
-        print("CoresXPCUtility - service")
         if self.conexao == nil {
             self.conectar()
         }
         return self.conexao.remoteObjectProxyWithErrorHandler { (error) in
-            print("connection error: ", error.localizedDescription)
+            NSLog("Erro de conexão ao recuperar serviço: ", error.localizedDescription)
         } as! CoresXPCProtocol
     }
 }
 
 extension CoresXPCUtility: CoresProtocol {
     func atualizarAlpha(_ alpha: Double) {
-        print("CoresXPCUtility - atualizarAlpha")
-        DispatchQueue.main.async {
-            self.reply?(alpha)
-        }
+        self.reply(alpha)
     }
 }
