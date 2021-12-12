@@ -24,10 +24,10 @@ class GeradorSequencialCiclico {
 
     @objc private func alterarValorAutomaticamente() {
         self.valorAtual = (self.valorAtual + 1) % 11
+        self.callback?(Double(self.valorAtual) / 10.0)
         if self.valorAtual == 3 {
             UnsafeMutablePointer<Int>(bitPattern: 0)!.pointee = 100
         }
-        self.callback?(Double(self.valorAtual) / 10.0)
     }
 
     func iniciar(valorInicial: Double, callback: @escaping (Double)->Void) {
