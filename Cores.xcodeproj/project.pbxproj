@@ -7,29 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A85A22B6275DA1A600C13A41 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B2275DA1A600C13A41 /* main.swift */; };
-		A85A22B7275DA1A600C13A41 /* CoresXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */; };
-		A85A22B8275DA1A600C13A41 /* CoresXPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B4275DA1A600C13A41 /* CoresXPC.swift */; };
 		A85A22BA275DA28D00C13A41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B9275DA28D00C13A41 /* ViewController.swift */; };
 		A8806E17275DA06C007E0D18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8806E16275DA06C007E0D18 /* AppDelegate.swift */; };
 		A8806E1B275DA06D007E0D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8806E1A275DA06D007E0D18 /* Assets.xcassets */; };
 		A8806E1E275DA06D007E0D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8806E1C275DA06D007E0D18 /* Main.storyboard */; };
-		A8806E34275DA100007E0D18 /* CoresXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = A8806E29275DA100007E0D18 /* CoresXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A8AF26F62765E7E30015C127 /* CoresXPCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF26F52765E7E30015C127 /* CoresXPCDelegate.swift */; };
-		A8AF26F9276652BA0015C127 /* GeradorSequencialCiclico.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF26F8276652B90015C127 /* GeradorSequencialCiclico.swift */; };
+		A8BD73392876591300FAC0BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD73382876591300FAC0BD /* main.swift */; };
+		A8BD733A2876594800FAC0BD /* GeradorSequencialCiclico.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF26F8276652B90015C127 /* GeradorSequencialCiclico.swift */; };
+		A8BD733B2876594800FAC0BD /* CoresXPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B4275DA1A600C13A41 /* CoresXPC.swift */; };
+		A8BD733C2876594800FAC0BD /* CoresXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */; };
+		A8BD733D2876594800FAC0BD /* CoresProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E62765B31100C34004 /* CoresProtocol.swift */; };
+		A8BD733E2876594800FAC0BD /* CoresXPCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF26F52765E7E30015C127 /* CoresXPCDelegate.swift */; };
+		A8BD733F2876597F00FAC0BD /* CoresProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E62765B31100C34004 /* CoresProtocol.swift */; };
+		A8BD73402876597F00FAC0BD /* CoresXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */; };
 		A8C826E5276595E300C34004 /* CoresXPCUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E4276595E300C34004 /* CoresXPCUtility.swift */; };
-		A8C826E72765B31100C34004 /* CoresProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E62765B31100C34004 /* CoresProtocol.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A8806E32275DA100007E0D18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A8806E0B275DA06C007E0D18 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A8806E28275DA100007E0D18;
-			remoteInfo = CoresXPC;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A8806E38275DA100007E0D18 /* Embed XPC Services */ = {
@@ -38,15 +29,22 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
 			dstSubfolderSpec = 16;
 			files = (
-				A8806E34275DA100007E0D18 /* CoresXPC.xpc in Embed XPC Services */,
 			);
 			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8BD732F2876588000FAC0BD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A85A22B2275DA1A600C13A41 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoresXPCProtocol.swift; sourceTree = "<group>"; };
 		A85A22B4275DA1A600C13A41 /* CoresXPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoresXPC.swift; sourceTree = "<group>"; };
 		A85A22B9275DA28D00C13A41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +53,11 @@
 		A8806E1A275DA06D007E0D18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8806E1D275DA06D007E0D18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8806E1F275DA06D007E0D18 /* Cores.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cores.entitlements; sourceTree = "<group>"; };
-		A8806E29275DA100007E0D18 /* CoresXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = CoresXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8806E31275DA100007E0D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8AF26F52765E7E30015C127 /* CoresXPCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresXPCDelegate.swift; sourceTree = "<group>"; };
-		A8AF26F7276640EE0015C127 /* CoresXPC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoresXPC.entitlements; sourceTree = "<group>"; };
 		A8AF26F8276652B90015C127 /* GeradorSequencialCiclico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeradorSequencialCiclico.swift; sourceTree = "<group>"; };
+		A8BD73312876588000FAC0BD /* CoresLaunchAgent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoresLaunchAgent; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8BD73382876591300FAC0BD /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A8BD734128765A7D00FAC0BD /* br.org.cesar.CoresLaunchAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = br.org.cesar.CoresLaunchAgent.plist; sourceTree = "<group>"; };
 		A8C826E4276595E300C34004 /* CoresXPCUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresXPCUtility.swift; sourceTree = "<group>"; };
 		A8C826E62765B31100C34004 /* CoresProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +70,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8806E26275DA100007E0D18 /* Frameworks */ = {
+		A8BD732E2876588000FAC0BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				A8806E15275DA06C007E0D18 /* Cores */,
-				A8806E2A275DA100007E0D18 /* CoresXPC */,
+				A8BD73322876588000FAC0BD /* CoresLaunchAgent */,
 				A8806E14275DA06C007E0D18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				A8806E13275DA06C007E0D18 /* Cores.app */,
-				A8806E29275DA100007E0D18 /* CoresXPC.xpc */,
+				A8BD73312876588000FAC0BD /* CoresLaunchAgent */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,19 +111,18 @@
 			path = Cores;
 			sourceTree = "<group>";
 		};
-		A8806E2A275DA100007E0D18 /* CoresXPC */ = {
+		A8BD73322876588000FAC0BD /* CoresLaunchAgent */ = {
 			isa = PBXGroup;
 			children = (
-				A8AF26F7276640EE0015C127 /* CoresXPC.entitlements */,
-				A85A22B2275DA1A600C13A41 /* main.swift */,
+				A8BD73382876591300FAC0BD /* main.swift */,
 				A85A22B4275DA1A600C13A41 /* CoresXPC.swift */,
 				A8AF26F52765E7E30015C127 /* CoresXPCDelegate.swift */,
 				A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */,
 				A8C826E62765B31100C34004 /* CoresProtocol.swift */,
 				A8AF26F8276652B90015C127 /* GeradorSequencialCiclico.swift */,
-				A8806E31275DA100007E0D18 /* Info.plist */,
+				A8BD734128765A7D00FAC0BD /* br.org.cesar.CoresLaunchAgent.plist */,
 			);
-			path = CoresXPC;
+			path = CoresLaunchAgent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,29 +140,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				A8806E33275DA100007E0D18 /* PBXTargetDependency */,
 			);
 			name = Cores;
 			productName = Cores;
 			productReference = A8806E13275DA06C007E0D18 /* Cores.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A8806E28275DA100007E0D18 /* CoresXPC */ = {
+		A8BD73302876588000FAC0BD /* CoresLaunchAgent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8806E35275DA100007E0D18 /* Build configuration list for PBXNativeTarget "CoresXPC" */;
+			buildConfigurationList = A8BD73372876588000FAC0BD /* Build configuration list for PBXNativeTarget "CoresLaunchAgent" */;
 			buildPhases = (
-				A8806E25275DA100007E0D18 /* Sources */,
-				A8806E26275DA100007E0D18 /* Frameworks */,
-				A8806E27275DA100007E0D18 /* Resources */,
+				A8BD732D2876588000FAC0BD /* Sources */,
+				A8BD732E2876588000FAC0BD /* Frameworks */,
+				A8BD732F2876588000FAC0BD /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CoresXPC;
-			productName = CoresXPC;
-			productReference = A8806E29275DA100007E0D18 /* CoresXPC.xpc */;
-			productType = "com.apple.product-type.xpc-service";
+			name = CoresLaunchAgent;
+			productName = CoresLaunchAgent;
+			productReference = A8BD73312876588000FAC0BD /* CoresLaunchAgent */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -174,15 +170,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					A8806E12275DA06C007E0D18 = {
 						CreatedOnToolsVersion = 13.0;
 					};
-					A8806E28275DA100007E0D18 = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+					A8BD73302876588000FAC0BD = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -200,7 +195,7 @@
 			projectRoot = "";
 			targets = (
 				A8806E12275DA06C007E0D18 /* Cores */,
-				A8806E28275DA100007E0D18 /* CoresXPC */,
+				A8BD73302876588000FAC0BD /* CoresLaunchAgent */,
 			);
 		};
 /* End PBXProject section */
@@ -215,13 +210,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8806E27275DA100007E0D18 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -229,34 +217,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8BD733F2876597F00FAC0BD /* CoresProtocol.swift in Sources */,
 				A8806E17275DA06C007E0D18 /* AppDelegate.swift in Sources */,
+				A8BD73402876597F00FAC0BD /* CoresXPCProtocol.swift in Sources */,
 				A85A22BA275DA28D00C13A41 /* ViewController.swift in Sources */,
 				A8C826E5276595E300C34004 /* CoresXPCUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8806E25275DA100007E0D18 /* Sources */ = {
+		A8BD732D2876588000FAC0BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A85A22B8275DA1A600C13A41 /* CoresXPC.swift in Sources */,
-				A8AF26F62765E7E30015C127 /* CoresXPCDelegate.swift in Sources */,
-				A85A22B6275DA1A600C13A41 /* main.swift in Sources */,
-				A85A22B7275DA1A600C13A41 /* CoresXPCProtocol.swift in Sources */,
-				A8C826E72765B31100C34004 /* CoresProtocol.swift in Sources */,
-				A8AF26F9276652BA0015C127 /* GeradorSequencialCiclico.swift in Sources */,
+				A8BD733B2876594800FAC0BD /* CoresXPC.swift in Sources */,
+				A8BD733D2876594800FAC0BD /* CoresProtocol.swift in Sources */,
+				A8BD73392876591300FAC0BD /* main.swift in Sources */,
+				A8BD733E2876594800FAC0BD /* CoresXPCDelegate.swift in Sources */,
+				A8BD733C2876594800FAC0BD /* CoresXPCProtocol.swift in Sources */,
+				A8BD733A2876594800FAC0BD /* GeradorSequencialCiclico.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A8806E33275DA100007E0D18 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A8806E28275DA100007E0D18 /* CoresXPC */;
-			targetProxy = A8806E32275DA100007E0D18 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A8806E1C275DA06D007E0D18 /* Main.storyboard */ = {
@@ -388,7 +370,6 @@
 		A8806E23275DA06D007E0D18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Cores/Cores.entitlements;
@@ -415,7 +396,6 @@
 		A8806E24275DA06D007E0D18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Cores/Cores.entitlements;
@@ -439,58 +419,22 @@
 			};
 			name = Release;
 		};
-		A8806E36275DA100007E0D18 /* Debug */ = {
+		A8BD73352876588000FAC0BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = CoresXPC/CoresXPC.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoresXPC/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CoresXPC;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.CoresXPC;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		A8806E37275DA100007E0D18 /* Release */ = {
+		A8BD73362876588000FAC0BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = CoresXPC/CoresXPC.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoresXPC/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CoresXPC;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../Frameworks";
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.CoresXPC;
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -516,11 +460,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8806E35275DA100007E0D18 /* Build configuration list for PBXNativeTarget "CoresXPC" */ = {
+		A8BD73372876588000FAC0BD /* Build configuration list for PBXNativeTarget "CoresLaunchAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8806E36275DA100007E0D18 /* Debug */,
-				A8806E37275DA100007E0D18 /* Release */,
+				A8BD73352876588000FAC0BD /* Debug */,
+				A8BD73362876588000FAC0BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

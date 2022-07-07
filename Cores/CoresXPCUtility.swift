@@ -17,7 +17,7 @@ class CoresXPCUtility {
     }
 
     private func conectar() {
-        self.conexao = NSXPCConnection(serviceName: "br.org.cesar.CoresXPC")
+        self.conexao = NSXPCConnection(machServiceName: "br.org.cesar.CoresLaunchAgent")
 
         self.conexao.remoteObjectInterface = NSXPCInterface(with: CoresXPCProtocol.self)
 

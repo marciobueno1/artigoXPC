@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>br.org.cesar.CoresLaunchAgent</string>
+	<key>MachServices</key>
+	<dict>
+		<key>br.org.cesar.CoresLaunchAgent</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/Users/marciobueno/code/myAgents/CoresLaunchAgent</string>
+</dict>
+</plist>
