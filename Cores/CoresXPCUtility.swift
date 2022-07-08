@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoresXPC
 
 class CoresXPCUtility {
     private var reply: (Double) -> Void
