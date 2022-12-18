@@ -20,6 +20,7 @@
 		A8BD733F2876597F00FAC0BD /* CoresProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E62765B31100C34004 /* CoresProtocol.swift */; };
 		A8BD73402876597F00FAC0BD /* CoresXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A22B3275DA1A600C13A41 /* CoresXPCProtocol.swift */; };
 		A8C826E5276595E300C34004 /* CoresXPCUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C826E4276595E300C34004 /* CoresXPCUtility.swift */; };
+		A8D1F8C9294F60FC0037C8D8 /* XPCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D1F8C8294F60FC0037C8D8 /* XPCHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,9 @@
 		A8BD734128765A7D00FAC0BD /* br.org.cesar.CoresLaunchAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = br.org.cesar.CoresLaunchAgent.plist; sourceTree = "<group>"; };
 		A8C826E4276595E300C34004 /* CoresXPCUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresXPCUtility.swift; sourceTree = "<group>"; };
 		A8C826E62765B31100C34004 /* CoresProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoresProtocol.swift; sourceTree = "<group>"; };
+		A8D1F8C6294F60FC0037C8D8 /* Cores-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cores-Bridging-Header.h"; sourceTree = "<group>"; };
+		A8D1F8C7294F60FC0037C8D8 /* XPCHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCHelper.h; sourceTree = "<group>"; };
+		A8D1F8C8294F60FC0037C8D8 /* XPCHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPCHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,9 @@
 				A8806E1C275DA06D007E0D18 /* Main.storyboard */,
 				A8806E1F275DA06D007E0D18 /* Cores.entitlements */,
 				A8C826E4276595E300C34004 /* CoresXPCUtility.swift */,
+				A8D1F8C7294F60FC0037C8D8 /* XPCHelper.h */,
+				A8D1F8C8294F60FC0037C8D8 /* XPCHelper.m */,
+				A8D1F8C6294F60FC0037C8D8 /* Cores-Bridging-Header.h */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 				TargetAttributes = {
 					A8806E12275DA06C007E0D18 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1420;
 					};
 					A8BD73302876588000FAC0BD = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -218,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8BD733F2876597F00FAC0BD /* CoresProtocol.swift in Sources */,
+				A8D1F8C9294F60FC0037C8D8 /* XPCHelper.m in Sources */,
 				A8806E17275DA06C007E0D18 /* AppDelegate.swift in Sources */,
 				A8BD73402876597F00FAC0BD /* CoresXPCProtocol.swift in Sources */,
 				A85A22BA275DA28D00C13A41 /* ViewController.swift in Sources */,
@@ -372,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Cores/Cores.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -389,6 +399,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.Cores;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cores/Cores-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -398,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Cores/Cores.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -415,6 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.Cores;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cores/Cores-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

@@ -72,10 +72,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
     
     @IBAction func aleatoriaAction(_ sender: Any) {
-        Task {
-            let cor = await xpcUtility.servicoXPC().getCorAleatoria()
-            self.fundoBox.borderColor = cor
-            self.fundoBox.fillColor = cor
-        }
+        let cor = XPCHelper.getCorAleatoria(self.xpcUtility)
+        self.fundoBox.borderColor = cor
+        self.fundoBox.fillColor = cor
     }
 }

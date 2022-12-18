@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CoresXPCUtility {
+class CoresXPCUtility: NSObject {
     private var reply: (Double) -> Void
     private var conexao: NSXPCConnection!
 
@@ -44,7 +44,7 @@ class CoresXPCUtility {
         self.conexao.invalidate()
     }
 
-    public func servicoXPC() -> CoresXPCProtocol {
+    @objc public func servicoXPC() -> CoresXPCProtocol {
         if self.conexao == nil {
             self.conectar()
         }
