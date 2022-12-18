@@ -70,4 +70,12 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBAction func pararAction(_ sender: NSButton) {
         xpcUtility.servicoXPC().pararGeradorCiclicoAlpha()
     }
+    
+    @IBAction func aleatoriaAction(_ sender: Any) {
+        Task {
+            let cor = await xpcUtility.servicoXPC().getCorAleatoria()
+            self.fundoBox.borderColor = cor
+            self.fundoBox.fillColor = cor
+        }
+    }
 }
